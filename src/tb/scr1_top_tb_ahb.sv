@@ -347,6 +347,7 @@ scr1_top_ahb i_top (
     .dmem_hrdata        (dmem_hrdata    ),
     .dmem_hresp         (dmem_hresp     )
 );
+    scr1_tb_log_blez u_scr1_tb_log_blez();
 
 //-------------------------------------------------------------------------------
 // Memory instance
