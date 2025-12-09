@@ -44,8 +44,8 @@
    - В файл `src/tb/scr1_top_tb_ahb.sv` добавлен инстанс:  
      `scr1_tb_log_blez u_scr1_tb_log_blez();`.  
 
-        ![BGE disassembly](module.png)
-
+    ![BGE disassembly](module.png)    
+    
 5. Анализ временных диаграмм в GTKWave:  
    - Открыт файл `simx.vcd` из каталога  
      `build/verilator_wf_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_1/`.  
