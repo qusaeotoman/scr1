@@ -43,7 +43,8 @@
      `Detect BLEZ (BGE) command`, тем самым фиксируя прохождение целевой команды через конвейер.  
    - В файл `src/tb/scr1_top_tb_ahb.sv` добавлен инстанс:  
      `scr1_tb_log_blez u_scr1_tb_log_blez();`.  
-        ![BGE disassembly](dump.png)
+
+        ![BGE disassembly](module.png)
 
 5. Анализ временных диаграмм в GTKWave:  
    - Открыт файл `simx.vcd` из каталога  
@@ -58,12 +59,15 @@
        - `ahb_imem_rdata` – считанное слово инструкции.  
    - Связаны три уровня представления команды BGE:  
      - disassembly в файле `bge.dump`, где, например, по адресу `0x000002a6` находится команда  
+
+        ![BGE disassembly](dump.png)
+
        `bge ra, sp, 2b2` с машинным кодом `0x0020D663`;  
      - временная диаграмма GTKWave, где в тот же момент времени наблюдается  
        `ahb_imem_resp = 01` и `ahb_imem_rdata = 0x0020D663`;  
      - сообщение `Detect BLEZ (BGE) command` в тексте симуляции.  
         ![GTKWave waveform](GTK.png)
-        
+
 6. Результаты
 
 - Модуль `scr1_tb_log_blez` корректно обнаруживает моменты прохождения команды BGE, соответствующей лабораторной команде BLEZ.  
