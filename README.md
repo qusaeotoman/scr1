@@ -6,6 +6,7 @@ SCR1 is an open-source and free to use RISC-V compatible MCU-class core, designe
 
 ## Key features
 
+
 * Open sourced under SHL-license (see LICENSE file) - unrestricted commercial use allowed
 * RV32I or RV32E ISA base + optional RVM and RVC standard extensions
 * Machine privilege mode only
